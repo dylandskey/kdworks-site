@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Adoption &amp; Opportunity Survey | KD Works</title>
-  <meta name="description" content="A short, anonymous survey from KD Works about how your work gets done today and where AI could help. About 7 to 10 minutes.">
+  <meta name="description" content="A short survey from KD Works about how your work gets done today and where AI could help. About 7 to 10 minutes.">
   <meta name="robots" content="noindex">
   <link rel="canonical" href="https://kdworksllc.com/survey.html">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -45,9 +45,9 @@
         <h1 class="survey-title">Where could your work be easier?</h1>
         <div class="brass-rule" aria-hidden="true"></div>
         <p class="lead">Help us understand where your work could be easier, faster, or more effective. We&rsquo;ll ask about everyday tasks first, then your experience with AI tools. No AI knowledge is needed, and it is fine if you have never used AI or do not think it would help.</p>
-        <p>Allow about 7 to 10 minutes. Please answer based on a typical recent workweek. Estimates and brief examples are enough. Do not include customer or employee names, confidential records, passwords, or other sensitive details. Names and email addresses are not requested. Your role and written examples may still make you identifiable.</p>
+        <p>Allow about 7 to 10 minutes. Please answer based on a typical recent workweek. Estimates and brief examples are enough. Do not include customer or employee names, confidential records, passwords, or other sensitive details. We ask for your name, email and organization at the top so we can follow up with you.</p>
         <p>The purpose is to identify workflow improvements and useful support. AI may be one option; clearer processes or better use of existing tools may be another.</p>
-        <p class="survey-privacy">Your answers are sent to the KD Works team by email through a form service and are not shown publicly. Questions marked <span class="req">*</span> are required.</p>
+        <p class="survey-privacy">Your answers are sent to the KD Works team by email through a form service and are not shown publicly or shared. We will use your contact details only to reply about this survey. Questions marked <span class="req">*</span> are required.</p>
       </div>
     </section>
 
@@ -55,10 +55,21 @@
       <div class="wrap narrow">
         <form id="survey" novalidate>
           <input type="checkbox" name="botcheck" id="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <div class="survey-q" data-q="org">
-            <label class="survey-label" for="org">Organization (optional). This only helps us group answers; leave it blank if you prefer.</label>
-            <input class="survey-text" type="text" id="org" name="org" maxlength="120" autocomplete="organization">
-          </div>
+          <fieldset class="survey-section">
+            <legend><span class="survey-sec-num">Contact</span>Who we are hearing from</legend>
+            <div class="survey-q" data-q="contact-name" data-type="text" data-required="true">
+              <label class="survey-label" for="contact-name">Your name <span class="req" aria-hidden="true">*</span></label>
+              <input class="survey-text" type="text" id="contact-name" maxlength="120" autocomplete="name">
+            </div>
+            <div class="survey-q" data-q="contact-email" data-type="text" data-required="true">
+              <label class="survey-label" for="contact-email">Your email <span class="req" aria-hidden="true">*</span></label>
+              <input class="survey-text" type="email" id="contact-email" maxlength="160" autocomplete="email">
+            </div>
+            <div class="survey-q" data-q="org" data-type="text" data-required="true">
+              <label class="survey-label" for="org">Organization <span class="req" aria-hidden="true">*</span></label>
+              <input class="survey-text" type="text" id="org" name="org" maxlength="120" autocomplete="organization">
+            </div>
+          </fieldset>
 
         <fieldset class="survey-section">
           <legend><span class="survey-sec-num">Section 1</span>About your work</legend>
@@ -478,10 +489,16 @@
       Array.prototype.forEach.call(form.querySelectorAll(".survey-q"), function (el) { el.classList.remove("has-error"); });
 
       var data = {};
+      var contact = {};
       var firstBad = null;
       Array.prototype.forEach.call(form.querySelectorAll(".survey-q[data-q]"), function (el) {
         var id = el.getAttribute("data-q");
-        if (id === "org") { data["Organization"] = valueOf(el); return; }
+        if (id === "org" || id === "contact-name" || id === "contact-email") {
+          var cv = valueOf(el);
+          if (!cv || (id === "contact-email" && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(cv))) { el.classList.add("has-error"); if (!firstBad) firstBad = el; }
+          if (id === "org") data["Organization"] = cv; else if (id === "contact-name") contact.name = cv; else contact.email = cv;
+          return;
+        }
         var inSkipped = aiSection.hidden && aiSection.contains(el);
         var v = inSkipped ? "(skipped: has not used AI)" : valueOf(el);
         if (!inSkipped && el.getAttribute("data-required") && !v) { el.classList.add("has-error"); if (!firstBad) firstBad = el; }
@@ -497,6 +514,7 @@
       }
 
       var payload = { access_key: SETTINGS.ACCESS_KEY, subject: SETTINGS.SUBJECT, from_name: "KD Works website survey", botcheck: "" };
+      payload.name = contact.name; payload.email = contact.email;
       if (source) payload["Source tag"] = source;
       for (var k in data) payload[k] = data[k];
 
