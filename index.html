@@ -147,71 +147,97 @@
       <div class="wrap">
         <p class="eyebrow">Custom builds</p>
         <h2>When the job goes beyond what your tools can do</h2>
-        <p class="section-intro">Sometimes a problem is bigger than the tools you have. When that happens, we build something custom. To keep it simple and safe, we use a ladder that describes how much freedom the AI is given. We start on the lowest rung that solves the problem, and we climb only when the problem needs it.</p>
+        <p class="section-intro">Sometimes a problem is bigger than the tools you have. When that happens, we build something custom. To keep it simple and safe, we label every project with a level on our Autonomy Ladder, which describes how much freedom the AI is given. We start at the lowest level that solves the problem, and climb only when it needs more. Each level up adds capability, and also cost, delay, unpredictability and testing work.</p>
+
+        <div class="ladder-types">
+          <div>
+            <p class="eyebrow">Workflow &middot; Levels 1 to 6</p>
+            <p><strong>We decide the steps. The AI does the thinking inside each step.</strong> It is predictable, cheaper, and easy to test and explain.</p>
+          </div>
+          <div>
+            <p class="eyebrow">Agent &middot; Level 7</p>
+            <p><strong>The AI decides the steps, which tools to use, and when it is done.</strong> It is the most flexible, and it has the most room for expensive, confident mistakes.</p>
+          </div>
+        </div>
 
         <ol class="ladder">
           <li style="--lvl: 0">
-            <span class="rung-num">00</span>
+            <span class="rung-num">0</span>
             <div class="rung-body">
-              <h3>Ordinary software</h3>
-              <p>No AI runs when people use it. It follows fixed rules, like a scheduler, a calculator or a checklist tool.</p>
+              <h3>Product, no AI inside <span class="rung-tag">Off the ladder</span></h3>
+              <p>Software or a one-time build where the finished product never calls an AI model. AI may help us build it. It is not autonomy, but it is still work we do.</p>
+              <p class="rung-example"><span class="rung-industry">Example &middot; Landscaping company</span>A simple online booking page and a spreadsheet turned into a shared crew calendar. AI helped write the code, but the finished tools are plain software.</p>
             </div>
           </li>
           <li style="--lvl: 1">
-            <span class="rung-num">01</span>
+            <span class="rung-num">1</span>
             <div class="rung-body">
-              <h3>One request</h3>
-              <p>The AI does one job, once. For example, it turns approved facts into a draft update. A person reviews it.</p>
+              <h3>Single AI call <span class="rung-tag">Most value starts here</span></h3>
+              <p>One well-designed prompt, one task, run every time it is needed. Summarize an intake form, draft a reply, classify a document.</p>
+              <p class="rung-example"><span class="rung-industry">Example &middot; Dental office</span>Each new-patient intake form is turned into a five-line summary (concerns, history, insurance) for the hygienist before the appointment.</p>
             </div>
           </li>
           <li style="--lvl: 2">
-            <span class="rung-num">02</span>
+            <span class="rung-num">2</span>
             <div class="rung-body">
-              <h3>Fixed steps</h3>
-              <p>Several AI steps in a set order, where each step uses the last one's result, such as notes, then a summary, then a draft.</p>
+              <h3>Prompt chaining</h3>
+              <p>A fixed sequence of steps. Each step is simple and checkable.</p>
+              <p class="rung-example"><span class="rung-industry">Example &middot; Accounting firm</span>A vendor invoice arrives. Step 1 pulls out vendor, amount and date. Step 2 checks them against the purchase order. Step 3 drafts the bookkeeping entry for a person to approve.</p>
             </div>
           </li>
           <li style="--lvl: 3">
-            <span class="rung-num">03</span>
+            <span class="rung-num">3</span>
             <div class="rung-body">
-              <h3>Sorting and routing</h3>
-              <p>The AI reads an incoming request and sends it to the right path. Anything unclear or sensitive goes straight to a person.</p>
+              <h3>Routing</h3>
+              <p>AI classifies the input and sends it down the right path. Billing goes to one prompt, scheduling to another, and anything unclear goes to a person.</p>
+              <p class="rung-example"><span class="rung-industry">Example &middot; Veterinary clinic</span>Website messages are sorted as appointment request, prescription refill, billing question or emergency. Each type gets its own reply template. Emergencies skip AI and go straight to the front desk.</p>
             </div>
           </li>
           <li style="--lvl: 4">
-            <span class="rung-num">04</span>
+            <span class="rung-num">4</span>
             <div class="rung-body">
-              <h3>Side by side</h3>
-              <p>A fixed set of separate AI jobs runs at the same time, and the results are combined into one report.</p>
+              <h3>Parallelization</h3>
+              <p>Split the work into independent pieces and run them at once, or run the same check several times and compare for reliability.</p>
+              <p class="rung-example"><span class="rung-industry">Example &middot; Law office</span>A vendor contract gets three checks at the same time: one for liability, one for payment terms, one for termination clauses. The results are combined into one summary for the attorney.</p>
             </div>
           </li>
           <li style="--lvl: 5">
-            <span class="rung-num">05</span>
+            <span class="rung-num">5</span>
             <div class="rung-body">
-              <h3>Lead and helpers</h3>
-              <p>For each new case, one AI plans the work, helpers carry out the pieces, and the lead pulls it together.</p>
+              <h3>Orchestrator-workers <span class="rung-tag">Feels agentic</span></h3>
+              <p>A lead AI breaks the job into subtasks it did not know in advance and hands them to worker calls.</p>
+              <p class="rung-example"><span class="rung-industry">Example &middot; Marketing agency</span>"Build a competitor report for this client." The lead AI decides which five competitors matter and what to check for each, sends each one to a worker, then assembles the report.</p>
             </div>
           </li>
           <li style="--lvl: 6">
-            <span class="rung-num">06</span>
+            <span class="rung-num">6</span>
             <div class="rung-body">
-              <h3>Draft, check, revise</h3>
-              <p>The AI writes a draft, a second pass checks it against clear criteria, and it revises until it passes or hits a limit.</p>
+              <h3>Evaluator-optimizer <span class="rung-tag">Feels agentic</span></h3>
+              <p>One AI drafts, another critiques against criteria, and the loop repeats until the result is good enough. Use it when "good" is clear but hard to hit on the first try.</p>
+              <p class="rung-example"><span class="rung-industry">Example &middot; Nonprofit</span>AI drafts a grant application. A second AI scores it against the funder's published rubric and lists what is weak. The draft is revised until every section scores well, then a person submits.</p>
             </div>
           </li>
           <li style="--lvl: 7">
-            <span class="rung-num">07</span>
+            <span class="rung-num">7</span>
             <div class="rung-body">
-              <h3>Autonomous agent</h3>
-              <p>Given a goal and a short list of allowed tools, the AI decides its next step based on what it finds. It has the most freedom and the most guardrails.</p>
+              <h3>Autonomous agent <span class="rung-tag">AI picks the path</span></h3>
+              <p>Gets a goal plus tools (email, CRM, web, files) and loops: act, observe, decide the next step.</p>
+              <p class="rung-example"><span class="rung-industry">Example &middot; Online store</span>Goal: "resolve this customer ticket." The agent looks up the order, checks tracking, reads the return policy and issues a refund under $50 on its own. Anything bigger goes to a person.</p>
             </div>
           </li>
         </ol>
 
+        <div class="ladder-question">
+          <p class="eyebrow">The one question</p>
+          <h3>Can we write the steps down in advance?</h3>
+          <p><strong>Yes:</strong> it is a workflow. We build the lowest level that solves it, which covers most business cases.</p>
+          <p><strong>No:</strong> it may be an agent, but only if the path really varies from case to case and a wrong step is cheap or a person approves before anything irreversible.</p>
+        </div>
+
         <div class="ladder-notes">
-          <p><strong>Higher is not better.</strong> A simple tool that always works beats a clever one that sometimes surprises you. Most problems are solved on the lower rungs.</p>
-          <p><strong>A person stays in charge.</strong> On every rung, the AI drafts and recommends. Sending, publishing, buying and changing real records need a person's approval.</p>
-          <p><strong>Everyone knows what is being built.</strong> Labeling each project by rung gives you and us the same picture of what it does, what it costs to run, and what could go wrong.</p>
+          <p><strong>Start low.</strong> We usually start at levels 1 to 3, prove the value in weeks, and move up only when a simpler level hits a ceiling.</p>
+          <p><strong>More freedom, more guardrails.</strong> Limited tool permissions, spending caps, logs, and a person approving anything that touches customers, money or records.</p>
+          <p><strong>Everyone knows what is being built.</strong> Every project gets a level before we start it, so you and we share the same picture of what it does.</p>
         </div>
       </div>
     </section>
