@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Adoption &amp; Opportunity Survey | KD Works</title>
+  <meta name="description" content="A short, anonymous survey from KD Works about how your work gets done today and where AI could help. About 7 to 10 minutes.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://kdworksllc.com/survey.html">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta name="theme-color" content="#1E3A5F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!--
+    EDITING THIS SURVEY
+    - Questions and answer choices are plain HTML below. Change the words inside the <span> or <p> tags.
+    - To add an answer choice, copy a whole <label class="opt"> line and change its value and text.
+    - Add data-max="3" to a question to limit how many boxes can be ticked.
+    - The settings (where answers are emailed) are in the SETTINGS block at the bottom of this file.
+  -->
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a href="index.html" class="logo-link" aria-label="KD Works home">
+        <img src="assets/kdworks-logo-horizontal-navy.svg" alt="KD Works" width="180" height="53">
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="index.html">Back to home</a></li>
+          <li><a href="mailto:info@kdworksllc.com" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section survey-hero">
+      <div class="wrap narrow">
+        <p class="eyebrow">AI Adoption &amp; Opportunity Survey</p>
+        <h1 class="survey-title">Where could your work be easier?</h1>
+        <div class="brass-rule" aria-hidden="true"></div>
+        <p class="lead">Help us understand where your work could be easier, faster, or more effective. We&rsquo;ll ask about everyday tasks first, then your experience with AI tools. No AI knowledge is needed, and it is fine if you have never used AI or do not think it would help.</p>
+        <p>Allow about 7 to 10 minutes. Please answer based on a typical recent workweek. Estimates and brief examples are enough. Do not include customer or employee names, confidential records, passwords, or other sensitive details. Names and email addresses are not requested. Your role and written examples may still make you identifiable.</p>
+        <p>The purpose is to identify workflow improvements and useful support. AI may be one option; clearer processes or better use of existing tools may be another.</p>
+        <p class="survey-privacy">Your answers are sent to the KD Works team by email through a form service and are not shown publicly. Questions marked <span class="req">*</span> are required.</p>
+      </div>
+    </section>
+
+    <section class="section survey-body">
+      <div class="wrap narrow">
+        <form id="survey" novalidate>
+          <input type="checkbox" name="botcheck" id="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="survey-q" data-q="org">
+            <label class="survey-label" for="org">Organization (optional). This only helps us group answers; leave it blank if you prefer.</label>
+            <input class="survey-text" type="text" id="org" name="org" maxlength="120" autocomplete="organization">
+          </div>
+
+        <fieldset class="survey-section">
+          <legend><span class="survey-sec-num">Section 1</span>About your work</legend>
+          <div class="survey-q" data-q="q1" data-type="radio" data-required="true">
+            <p class="survey-label" id="q1-l"><span class="qnum">1.</span> Which team or function best describes most of your work? <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="radiogroup" aria-labelledby="q1-l">
+              <label class="opt"><input type="radio" name="q1" value="Leadership or administration"> <span>Leadership or administration</span></label>
+              <label class="opt"><input type="radio" name="q1" value="Operations"> <span>Operations</span></label>
+              <label class="opt"><input type="radio" name="q1" value="Program or service delivery"> <span>Program or service delivery</span></label>
+              <label class="opt"><input type="radio" name="q1" value="Fundraising or development"> <span>Fundraising or development</span></label>
+              <label class="opt"><input type="radio" name="q1" value="Finance or accounting"> <span>Finance or accounting</span></label>
+              <label class="opt"><input type="radio" name="q1" value="Marketing or communications"> <span>Marketing or communications</span></label>
+              <label class="opt"><input type="radio" name="q1" value="Human resources or volunteer coordination"> <span>Human resources or volunteer coordination</span></label>
+              <label class="opt"><input type="radio" name="q1" value="Technology or IT"> <span>Technology or IT</span></label>
+              <label class="opt"><input type="radio" name="q1" value="Client, customer or community service"> <span>Client, customer or community service</span></label>
+              <label class="opt"><input type="radio" name="q1" value="Sales or business development"> <span>Sales or business development</span></label>
+              <label class="opt opt-other"><input type="radio" name="q1" value="Other" data-other="true"> <span>Other:</span> <input type="text" class="other-text" name="q1_other" aria-label="Other, please describe" maxlength="200" disabled></label>
+            </div>
+          </div>
+          <div class="survey-q" data-q="q2" data-type="text">
+            <label class="survey-label" for="q2"><span class="qnum">2.</span> Could you describe your primary responsibility in your role?</label>
+            <input class="survey-text" type="text" id="q2" name="q2" maxlength="300">
+          </div>
+        </fieldset>
+        <fieldset class="survey-section">
+          <legend><span class="survey-sec-num">Section 2</span>How you spend your time</legend>
+          <p class="survey-note">Think about a typical recent workweek.</p>
+          <div class="survey-q" data-q="q3" data-type="check" data-required="true" data-max="3">
+            <p class="survey-label" id="q3-l"><span class="qnum">3.</span> Which activities take the most time in your workweek? Select up to three. <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="group" aria-labelledby="q3-l">
+              <label class="opt"><input type="checkbox" name="q3" value="Email and messages"> <span>Email and messages</span></label>
+              <label class="opt"><input type="checkbox" name="q3" value="Meetings and scheduling"> <span>Meetings and scheduling</span></label>
+              <label class="opt"><input type="checkbox" name="q3" value="Writing documents, reports or content"> <span>Writing documents, reports or content</span></label>
+              <label class="opt"><input type="checkbox" name="q3" value="Entering data or updating records"> <span>Entering data or updating records</span></label>
+              <label class="opt"><input type="checkbox" name="q3" value="Finding information or files"> <span>Finding information or files</span></label>
+              <label class="opt"><input type="checkbox" name="q3" value="Spreadsheets and reporting"> <span>Spreadsheets and reporting</span></label>
+              <label class="opt"><input type="checkbox" name="q3" value="Approvals and sign-offs"> <span>Approvals and sign-offs</span></label>
+              <label class="opt"><input type="checkbox" name="q3" value="Planning and coordination"> <span>Planning and coordination</span></label>
+              <label class="opt"><input type="checkbox" name="q3" value="Training or supporting others"> <span>Training or supporting others</span></label>
+              <label class="opt"><input type="checkbox" name="q3" value="Helping clients, customers or the people we serve"> <span>Helping clients, customers or the people we serve</span></label>
+              <label class="opt opt-other"><input type="checkbox" name="q3" value="Other" data-other="true"> <span>Other:</span> <input type="text" class="other-text" name="q3_other" aria-label="Other, please describe" maxlength="200" disabled></label>
+            </div>
+          </div>
+          <div class="survey-q" data-q="q4" data-type="text" data-required="true">
+            <label class="survey-label" for="q4"><span class="qnum">4.</span> What is one recurring task you most wish were easier or took less time? A short example is enough; write “none” if nothing comes to mind. <span class="req" aria-hidden="true">*</span></label>
+            <input class="survey-text" type="text" id="q4" name="q4" maxlength="300" required>
+          </div>
+          <div class="survey-q" data-q="q5" data-type="radio" data-required="true">
+            <p class="survey-label" id="q5-l"><span class="qnum">5.</span> How often do you do the task you just described? <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="radiogroup" aria-labelledby="q5-l">
+              <label class="opt"><input type="radio" name="q5" value="Several times a day"> <span>Several times a day</span></label>
+              <label class="opt"><input type="radio" name="q5" value="Once a day"> <span>Once a day</span></label>
+              <label class="opt"><input type="radio" name="q5" value="A few times a week"> <span>A few times a week</span></label>
+              <label class="opt"><input type="radio" name="q5" value="Once a week"> <span>Once a week</span></label>
+              <label class="opt"><input type="radio" name="q5" value="A few times a month"> <span>A few times a month</span></label>
+              <label class="opt"><input type="radio" name="q5" value="Less often"> <span>Less often</span></label>
+              <label class="opt opt-other"><input type="radio" name="q5" value="Other" data-other="true"> <span>Other:</span> <input type="text" class="other-text" name="q5_other" aria-label="Other, please describe" maxlength="200" disabled></label>
+            </div>
+          </div>
+          <div class="survey-q" data-q="q6" data-type="radio" data-required="true">
+            <p class="survey-label" id="q6-l"><span class="qnum">6.</span> In a typical week, how much of YOUR working time goes into that task? Exclude time spent waiting for others. <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="radiogroup" aria-labelledby="q6-l">
+              <label class="opt"><input type="radio" name="q6" value="Less than 30 minutes"> <span>Less than 30 minutes</span></label>
+              <label class="opt"><input type="radio" name="q6" value="30 minutes to 1 hour"> <span>30 minutes to 1 hour</span></label>
+              <label class="opt"><input type="radio" name="q6" value="1 to 2 hours"> <span>1 to 2 hours</span></label>
+              <label class="opt"><input type="radio" name="q6" value="2 to 4 hours"> <span>2 to 4 hours</span></label>
+              <label class="opt"><input type="radio" name="q6" value="4 to 8 hours"> <span>4 to 8 hours</span></label>
+              <label class="opt"><input type="radio" name="q6" value="More than 8 hours"> <span>More than 8 hours</span></label>
+              <label class="opt opt-other"><input type="radio" name="q6" value="Other" data-other="true"> <span>Other:</span> <input type="text" class="other-text" name="q6_other" aria-label="Other, please describe" maxlength="200" disabled></label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="survey-section">
+          <legend><span class="survey-sec-num">Section 3</span>Repetitive tasks and bottlenecks</legend>
+          <p class="survey-note">Keep the task you described in mind for the next two questions.</p>
+          <div class="survey-q" data-q="q7" data-type="check" data-required="true" data-max="3">
+            <p class="survey-label" id="q7-l"><span class="qnum">7.</span> What makes that task harder or slower than it needs to be? Select up to three. <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="group" aria-labelledby="q7-l">
+              <label class="opt"><input type="checkbox" name="q7" value="Too many manual steps"> <span>Too many manual steps</span></label>
+              <label class="opt"><input type="checkbox" name="q7" value="Information is scattered across different places"> <span>Information is scattered across different places</span></label>
+              <label class="opt"><input type="checkbox" name="q7" value="Retyping the same information"> <span>Retyping the same information</span></label>
+              <label class="opt"><input type="checkbox" name="q7" value="Unclear process or unclear ownership"> <span>Unclear process or unclear ownership</span></label>
+              <label class="opt"><input type="checkbox" name="q7" value="Waiting on approvals or other people"> <span>Waiting on approvals or other people</span></label>
+              <label class="opt"><input type="checkbox" name="q7" value="The tools don’t work together"> <span>The tools don’t work together</span></label>
+              <label class="opt"><input type="checkbox" name="q7" value="Hard to find past work or files"> <span>Hard to find past work or files</span></label>
+              <label class="opt"><input type="checkbox" name="q7" value="Inconsistent formats or quality"> <span>Inconsistent formats or quality</span></label>
+              <label class="opt"><input type="checkbox" name="q7" value="Frequent interruptions"> <span>Frequent interruptions</span></label>
+              <label class="opt"><input type="checkbox" name="q7" value="Not enough training"> <span>Not enough training</span></label>
+              <label class="opt opt-other"><input type="checkbox" name="q7" value="Other" data-other="true"> <span>Other:</span> <input type="text" class="other-text" name="q7_other" aria-label="Other, please describe" maxlength="200" disabled></label>
+            </div>
+          </div>
+          <div class="survey-q" data-q="q8" data-type="radio" data-required="true">
+            <p class="survey-label" id="q8-l"><span class="qnum">8.</span> What is the biggest consequence of this task being difficult or slow? <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="radiogroup" aria-labelledby="q8-l">
+              <label class="opt"><input type="radio" name="q8" value="Delays"> <span>Delays</span></label>
+              <label class="opt"><input type="radio" name="q8" value="Errors or rework"> <span>Errors or rework</span></label>
+              <label class="opt"><input type="radio" name="q8" value="Staff frustration or burnout"> <span>Staff frustration or burnout</span></label>
+              <label class="opt"><input type="radio" name="q8" value="Missed deadlines or opportunities"> <span>Missed deadlines or opportunities</span></label>
+              <label class="opt"><input type="radio" name="q8" value="Lower quality of service"> <span>Lower quality of service</span></label>
+              <label class="opt"><input type="radio" name="q8" value="Higher cost"> <span>Higher cost</span></label>
+              <label class="opt"><input type="radio" name="q8" value="No major consequence"> <span>No major consequence</span></label>
+              <label class="opt opt-other"><input type="radio" name="q8" value="Other" data-other="true"> <span>Other:</span> <input type="text" class="other-text" name="q8_other" aria-label="Other, please describe" maxlength="200" disabled></label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="survey-section">
+          <legend><span class="survey-sec-num">Section 4</span>Communication and information work</legend>
+          <div class="survey-q" data-q="q9" data-type="check" data-required="true" data-max="3">
+            <p class="survey-label" id="q9-l"><span class="qnum">9.</span> Which information tasks do you repeat most often? Select up to three; choose “None” alone if applicable. <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="group" aria-labelledby="q9-l">
+              <label class="opt"><input type="checkbox" name="q9" value="Answering similar questions"> <span>Answering similar questions</span></label>
+              <label class="opt"><input type="checkbox" name="q9" value="Summarizing documents or meetings"> <span>Summarizing documents or meetings</span></label>
+              <label class="opt"><input type="checkbox" name="q9" value="Drafting routine emails or messages"> <span>Drafting routine emails or messages</span></label>
+              <label class="opt"><input type="checkbox" name="q9" value="Copying information between systems"> <span>Copying information between systems</span></label>
+              <label class="opt"><input type="checkbox" name="q9" value="Compiling reports"> <span>Compiling reports</span></label>
+              <label class="opt"><input type="checkbox" name="q9" value="Scheduling and reminders"> <span>Scheduling and reminders</span></label>
+              <label class="opt"><input type="checkbox" name="q9" value="Sorting or categorizing requests"> <span>Sorting or categorizing requests</span></label>
+              <label class="opt"><input type="checkbox" name="q9" value="Checking for missing information"> <span>Checking for missing information</span></label>
+              <label class="opt"><input type="checkbox" name="q9" value="Looking up policies or procedures"> <span>Looking up policies or procedures</span></label>
+              <label class="opt"><input type="checkbox" name="q9" value="None" data-exclusive="true"> <span>None</span></label>
+              <label class="opt opt-other"><input type="checkbox" name="q9" value="Other" data-other="true"> <span>Other:</span> <input type="text" class="other-text" name="q9_other" aria-label="Other, please describe" maxlength="200" disabled></label>
+            </div>
+          </div>
+          <div class="survey-q" data-q="q10" data-type="text">
+            <label class="survey-label" for="q10"><span class="qnum">10.</span> Which apps or systems do you use for the task you described? List names only, if known.</label>
+            <input class="survey-text" type="text" id="q10" name="q10" maxlength="300">
+          </div>
+        </fieldset>
+        <fieldset class="survey-section">
+          <legend><span class="survey-sec-num">Section 5</span>Current AI usage</legend>
+          <p class="survey-note">AI tools can help draft text, summarize information, or answer questions. Examples include ChatGPT, Claude, Gemini, Copilot, and AI built into other software. No prior experience is expected.</p>
+          <div class="survey-q" data-q="q11" data-type="radio" data-required="true">
+            <p class="survey-label" id="q11-l"><span class="qnum">11.</span> How often do you currently use AI tools for work? <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="radiogroup" aria-labelledby="q11-l">
+              <label class="opt"><input type="radio" name="q11" value="Never"> <span>Never</span></label>
+              <label class="opt"><input type="radio" name="q11" value="Tried it once or twice"> <span>Tried it once or twice</span></label>
+              <label class="opt"><input type="radio" name="q11" value="A few times a month"> <span>A few times a month</span></label>
+              <label class="opt"><input type="radio" name="q11" value="Weekly"> <span>Weekly</span></label>
+              <label class="opt"><input type="radio" name="q11" value="Daily"> <span>Daily</span></label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="survey-section" data-section="ai-experience">
+          <legend><span class="survey-sec-num">Section 5a</span>Your experience with AI</legend>
+          <p class="survey-note">Think about tools you have actually used for work, even if you no longer use them.</p>
+          <div class="survey-q" data-q="q12" data-type="check" data-required="true">
+            <p class="survey-label" id="q12-l"><span class="qnum">12.</span> Which AI tools have you used for work? Select all that apply. <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="group" aria-labelledby="q12-l">
+              <label class="opt"><input type="checkbox" name="q12" value="ChatGPT"> <span>ChatGPT</span></label>
+              <label class="opt"><input type="checkbox" name="q12" value="Claude"> <span>Claude</span></label>
+              <label class="opt"><input type="checkbox" name="q12" value="Microsoft Copilot"> <span>Microsoft Copilot</span></label>
+              <label class="opt"><input type="checkbox" name="q12" value="Google Gemini"> <span>Google Gemini</span></label>
+              <label class="opt"><input type="checkbox" name="q12" value="AI features built into other software"> <span>AI features built into other software</span></label>
+              <label class="opt"><input type="checkbox" name="q12" value="None of these" data-exclusive="true"> <span>None of these</span></label>
+              <label class="opt opt-other"><input type="checkbox" name="q12" value="Other" data-other="true"> <span>Other:</span> <input type="text" class="other-text" name="q12_other" aria-label="Other, please describe" maxlength="200" disabled></label>
+            </div>
+          </div>
+          <div class="survey-q" data-q="q13" data-type="text">
+            <label class="survey-label" for="q13"><span class="qnum">13.</span> What is one work task you tried with AI? A brief example is enough.</label>
+            <input class="survey-text" type="text" id="q13" name="q13" maxlength="300">
+          </div>
+          <div class="survey-q" data-q="q14" data-type="radio" data-required="true">
+            <p class="survey-label" id="q14-l"><span class="qnum">14.</span> Overall, how useful was AI for that task? Include the effort needed to check or correct its work. <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="radiogroup" aria-labelledby="q14-l">
+              <label class="opt"><input type="radio" name="q14" value="Not useful"> <span>Not useful</span></label>
+              <label class="opt"><input type="radio" name="q14" value="Slightly useful"> <span>Slightly useful</span></label>
+              <label class="opt"><input type="radio" name="q14" value="Moderately useful"> <span>Moderately useful</span></label>
+              <label class="opt"><input type="radio" name="q14" value="Very useful"> <span>Very useful</span></label>
+              <label class="opt"><input type="radio" name="q14" value="Extremely useful"> <span>Extremely useful</span></label>
+              <label class="opt"><input type="radio" name="q14" value="Not sure" data-exclusive="true"> <span>Not sure</span></label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="survey-section">
+          <legend><span class="survey-sec-num">Section 6</span>Comfort, concerns and barriers</legend>
+          <p class="survey-note">There are no right or wrong answers. Please share what would make AI useful, difficult, or inappropriate in your work.</p>
+          <div class="survey-q" data-q="q15" data-type="radio" data-required="true">
+            <p class="survey-label" id="q15-l"><span class="qnum">15.</span> How comfortable would you feel trying an approved AI tool for a suitable work task? <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="radiogroup" aria-labelledby="q15-l">
+              <label class="opt"><input type="radio" name="q15" value="Very uncomfortable"> <span>Very uncomfortable</span></label>
+              <label class="opt"><input type="radio" name="q15" value="Somewhat uncomfortable"> <span>Somewhat uncomfortable</span></label>
+              <label class="opt"><input type="radio" name="q15" value="Neutral"> <span>Neutral</span></label>
+              <label class="opt"><input type="radio" name="q15" value="Somewhat comfortable"> <span>Somewhat comfortable</span></label>
+              <label class="opt"><input type="radio" name="q15" value="Very comfortable"> <span>Very comfortable</span></label>
+            </div>
+          </div>
+          <div class="survey-q" data-q="q16" data-type="radio" data-required="true">
+            <p class="survey-label" id="q16-l"><span class="qnum">16.</span> Do you know which AI tools and types of work information your organization allows you to use? <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="radiogroup" aria-labelledby="q16-l">
+              <label class="opt"><input type="radio" name="q16" value="Yes, clearly"> <span>Yes, clearly</span></label>
+              <label class="opt"><input type="radio" name="q16" value="Somewhat"> <span>Somewhat</span></label>
+              <label class="opt"><input type="radio" name="q16" value="No"> <span>No</span></label>
+              <label class="opt"><input type="radio" name="q16" value="There is no policy that I know of"> <span>There is no policy that I know of</span></label>
+              <label class="opt"><input type="radio" name="q16" value="Not sure" data-exclusive="true"> <span>Not sure</span></label>
+            </div>
+          </div>
+          <div class="survey-q" data-q="q17" data-type="check" data-required="true" data-max="3">
+            <p class="survey-label" id="q17-l"><span class="qnum">17.</span> What might prevent you from using AI at work? Select up to three; choose “No major barriers” alone if applicable. <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="group" aria-labelledby="q17-l">
+              <label class="opt"><input type="checkbox" name="q17" value="I don’t know where to start"> <span>I don’t know where to start</span></label>
+              <label class="opt"><input type="checkbox" name="q17" value="Privacy or confidentiality concerns"> <span>Privacy or confidentiality concerns</span></label>
+              <label class="opt"><input type="checkbox" name="q17" value="Worry about errors or accuracy"> <span>Worry about errors or accuracy</span></label>
+              <label class="opt"><input type="checkbox" name="q17" value="Not allowed, or the rules are unclear"> <span>Not allowed, or the rules are unclear</span></label>
+              <label class="opt"><input type="checkbox" name="q17" value="No time to learn"> <span>No time to learn</span></label>
+              <label class="opt"><input type="checkbox" name="q17" value="Cost"> <span>Cost</span></label>
+              <label class="opt"><input type="checkbox" name="q17" value="It doesn’t fit my work"> <span>It doesn’t fit my work</span></label>
+              <label class="opt"><input type="checkbox" name="q17" value="Worry about how it affects jobs"> <span>Worry about how it affects jobs</span></label>
+              <label class="opt"><input type="checkbox" name="q17" value="I don’t trust it"> <span>I don’t trust it</span></label>
+              <label class="opt"><input type="checkbox" name="q17" value="No major barriers" data-exclusive="true"> <span>No major barriers</span></label>
+              <label class="opt opt-other"><input type="checkbox" name="q17" value="Other" data-other="true"> <span>Other:</span> <input type="text" class="other-text" name="q17_other" aria-label="Other, please describe" maxlength="200" disabled></label>
+            </div>
+          </div>
+          <div class="survey-q" data-q="q18" data-type="check" data-required="true">
+            <p class="survey-label" id="q18-l"><span class="qnum">18.</span> Which safeguards would be important for the task you described? Select all that apply; choose “None identified” or “Not sure” alone. <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="group" aria-labelledby="q18-l">
+              <label class="opt"><input type="checkbox" name="q18" value="A person reviews the result before it is used"> <span>A person reviews the result before it is used</span></label>
+              <label class="opt"><input type="checkbox" name="q18" value="A clear list of approved tools"> <span>A clear list of approved tools</span></label>
+              <label class="opt"><input type="checkbox" name="q18" value="No sensitive information goes into AI tools"> <span>No sensitive information goes into AI tools</span></label>
+              <label class="opt"><input type="checkbox" name="q18" value="A record of what AI was used for"> <span>A record of what AI was used for</span></label>
+              <label class="opt"><input type="checkbox" name="q18" value="Training for the team"> <span>Training for the team</span></label>
+              <label class="opt"><input type="checkbox" name="q18" value="Clear rules on what is off limits"> <span>Clear rules on what is off limits</span></label>
+              <label class="opt"><input type="checkbox" name="q18" value="The ability to opt out"> <span>The ability to opt out</span></label>
+              <label class="opt"><input type="checkbox" name="q18" value="None identified" data-exclusive="true"> <span>None identified</span></label>
+              <label class="opt"><input type="checkbox" name="q18" value="Not sure" data-exclusive="true"> <span>Not sure</span></label>
+              <label class="opt opt-other"><input type="checkbox" name="q18" value="Other" data-other="true"> <span>Other:</span> <input type="text" class="other-text" name="q18_other" aria-label="Other, please describe" maxlength="200" disabled></label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="survey-section">
+          <legend><span class="survey-sec-num">Section 7</span>AI opportunities</legend>
+          <p class="survey-note">You do not need to know what AI can do. Tell us which improvements and support would matter to you.</p>
+          <div class="survey-q" data-q="q19" data-type="radio" data-required="true">
+            <p class="survey-label" id="q19-l"><span class="qnum">19.</span> What improvement would matter most for the task you described? <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="radiogroup" aria-labelledby="q19-l">
+              <label class="opt"><input type="radio" name="q19" value="Save time"> <span>Save time</span></label>
+              <label class="opt"><input type="radio" name="q19" value="Fewer errors"> <span>Fewer errors</span></label>
+              <label class="opt"><input type="radio" name="q19" value="More consistent quality"> <span>More consistent quality</span></label>
+              <label class="opt"><input type="radio" name="q19" value="Faster response to people"> <span>Faster response to people</span></label>
+              <label class="opt"><input type="radio" name="q19" value="Less stress or frustration"> <span>Less stress or frustration</span></label>
+              <label class="opt"><input type="radio" name="q19" value="More time for higher-value work"> <span>More time for higher-value work</span></label>
+              <label class="opt"><input type="radio" name="q19" value="Better visibility into progress"> <span>Better visibility into progress</span></label>
+              <label class="opt opt-other"><input type="radio" name="q19" value="Other" data-other="true"> <span>Other:</span> <input type="text" class="other-text" name="q19_other" aria-label="Other, please describe" maxlength="200" disabled></label>
+            </div>
+          </div>
+          <div class="survey-q" data-q="q20" data-type="check" data-required="true" data-max="3">
+            <p class="survey-label" id="q20-l"><span class="qnum">20.</span> What would you most want help learning or improving with AI? Select up to three; choose “No help wanted right now” alone if applicable. <span class="req" aria-hidden="true">*</span></p>
+            <div class="survey-options" role="group" aria-labelledby="q20-l">
+              <label class="opt"><input type="checkbox" name="q20" value="Writing better prompts"> <span>Writing better prompts</span></label>
+              <label class="opt"><input type="checkbox" name="q20" value="Summarizing documents or meetings"> <span>Summarizing documents or meetings</span></label>
+              <label class="opt"><input type="checkbox" name="q20" value="Drafting emails and other content"> <span>Drafting emails and other content</span></label>
+              <label class="opt"><input type="checkbox" name="q20" value="Analyzing data or spreadsheets"> <span>Analyzing data or spreadsheets</span></label>
+              <label class="opt"><input type="checkbox" name="q20" value="Automating repetitive tasks"> <span>Automating repetitive tasks</span></label>
+              <label class="opt"><input type="checkbox" name="q20" value="Using AI safely"> <span>Using AI safely</span></label>
+              <label class="opt"><input type="checkbox" name="q20" value="Choosing the right tool"> <span>Choosing the right tool</span></label>
+              <label class="opt"><input type="checkbox" name="q20" value="Connecting the tools I already use"> <span>Connecting the tools I already use</span></label>
+              <label class="opt"><input type="checkbox" name="q20" value="No help wanted right now" data-exclusive="true"> <span>No help wanted right now</span></label>
+              <label class="opt opt-other"><input type="checkbox" name="q20" value="Other" data-other="true"> <span>Other:</span> <input type="text" class="other-text" name="q20_other" aria-label="Other, please describe" maxlength="200" disabled></label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="survey-section">
+          <legend><span class="survey-sec-num">Section 8</span>Final open-ended questions</legend>
+          <p class="survey-note">These questions are optional. One or two sentences for each is plenty.</p>
+          <div class="survey-q" data-q="q21" data-type="area">
+            <label class="survey-label" for="q21"><span class="qnum">21.</span> If we could help improve one workflow, what would a better result look like? You can build on your earlier example or describe another one.</label>
+            <textarea class="survey-area" id="q21" name="q21" rows="4" maxlength="2000"></textarea>
+          </div>
+          <div class="survey-q" data-q="q22" data-type="area">
+            <label class="survey-label" for="q22"><span class="qnum">22.</span> Where should AI NOT be used in your work, or what would need to stay under human control? Describe the type of work without sharing sensitive details.</label>
+            <textarea class="survey-area" id="q22" name="q22" rows="4" maxlength="2000"></textarea>
+          </div>
+          <div class="survey-q" data-q="q23" data-type="area">
+            <label class="survey-label" for="q23"><span class="qnum">23.</span> What else should we understand about your work or your concerns before suggesting changes?</label>
+            <textarea class="survey-area" id="q23" name="q23" rows="4" maxlength="2000"></textarea>
+          </div>
+        </fieldset>
+
+          <p class="survey-error" id="survey-error" role="alert" hidden></p>
+          <p><button class="button" type="submit" id="survey-submit">Submit survey</button></p>
+        </form>
+
+        <div class="survey-thanks" id="survey-thanks" tabindex="-1" hidden>
+          <h2>Thank you.</h2>
+          <p>Your answers were sent to the KD Works team. We&rsquo;ll use them to find where better tools or support could help, and we&rsquo;ll share what we learn.</p>
+          <p><a class="button" href="index.html">Back to the KD Works home page</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <img src="assets/kdworks-logo-horizontal-white.svg" alt="KD Works" width="160" height="47">
+      <p>&copy; 2026 KD Works LLC &middot; <a href="mailto:info@kdworksllc.com">info@kdworksllc.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+  /* SETTINGS
+     ACCESS_KEY: the public form key from web3forms.com. It is not a password, but it decides which
+     inbox receives the answers. Leave it as-is until a real key is added.
+  */
+  var SETTINGS = {
+    ACCESS_KEY: "PASTE_WEB3FORMS_ACCESS_KEY_HERE",
+    SUBJECT: "KD Works AI survey response",
+    ENDPOINT: "https://api.web3forms.com/submit"
+  };
+  var LABELS = {
+  "q1": "01. Which team or function best describes most of your work?",
+  "q2": "02. Could you describe your primary responsibility in your role?",
+  "q3": "03. Which activities take the most time in your workweek? Select up to three.",
+  "q4": "04. What is one recurring task you most wish were easier or took less time? A short example is enough; write “none” if nothing comes to mind.",
+  "q5": "05. How often do you do the task you just described?",
+  "q6": "06. In a typical week, how much of YOUR working time goes into that task? Exclude time spent waiting for others.",
+  "q7": "07. What makes that task harder or slower than it needs to be? Select up to three.",
+  "q8": "08. What is the biggest consequence of this task being difficult or slow?",
+  "q9": "09. Which information tasks do you repeat most often? Select up to three; choose “None” alone if applicable.",
+  "q10": "10. Which apps or systems do you use for the task you described? List names only, if known.",
+  "q11": "11. How often do you currently use AI tools for work?",
+  "q12": "12. Which AI tools have you used for work? Select all that apply.",
+  "q13": "13. What is one work task you tried with AI? A brief example is enough.",
+  "q14": "14. Overall, how useful was AI for that task? Include the effort needed to check or correct its work.",
+  "q15": "15. How comfortable would you feel trying an approved AI tool for a suitable work task?",
+  "q16": "16. Do you know which AI tools and types of work information your organization allows you to use?",
+  "q17": "17. What might prevent you from using AI at work? Select up to three; choose “No major barriers” alone if applicable.",
+  "q18": "18. Which safeguards would be important for the task you described? Select all that apply; choose “None identified” or “Not sure” alone.",
+  "q19": "19. What improvement would matter most for the task you described?",
+  "q20": "20. What would you most want help learning or improving with AI? Select up to three; choose “No help wanted right now” alone if applicable.",
+  "q21": "21. If we could help improve one workflow, what would a better result look like? You can build on your earlier example or describe another one.",
+  "q22": "22. Where should AI NOT be used in your work, or what would need to stay under human control? Describe the type of work without sharing sensitive details.",
+  "q23": "23. What else should we understand about your work or your concerns before suggesting changes?"
+};
+
+  (function () {
+    var form = document.getElementById("survey");
+    var errBox = document.getElementById("survey-error");
+    var thanks = document.getElementById("survey-thanks");
+    var btn = document.getElementById("survey-submit");
+    var started = Date.now();
+
+    /* Optional source tag: survey.html?for=salvation-army (not shown to the respondent) */
+    var source = "";
+    try { source = (new URLSearchParams(location.search).get("for") || "").slice(0, 60); } catch (e) {}
+
+    function q(id) { return form.querySelector('[data-q="' + id + '"]'); }
+    function boxes(el) { return Array.prototype.slice.call(el.querySelectorAll('input[type=checkbox],input[type=radio]')); }
+
+    /* "Other" text boxes, ticking limits, and "None alone" choices */
+    Array.prototype.forEach.call(form.querySelectorAll(".survey-q[data-type=radio],.survey-q[data-type=check]"), function (el) {
+      var max = parseInt(el.getAttribute("data-max") || "0", 10);
+      var inputs = boxes(el);
+      function refresh() {
+        inputs.forEach(function (i) {
+          if (i.getAttribute("data-other")) {
+            var t = i.parentNode.querySelector(".other-text");
+            t.disabled = !i.checked;
+            if (!i.checked) t.value = "";
+          }
+        });
+        if (el.getAttribute("data-type") === "check") {
+          var checked = inputs.filter(function (i) { return i.checked; });
+          var excl = checked.some(function (i) { return i.getAttribute("data-exclusive"); });
+          inputs.forEach(function (i) {
+            var off = false;
+            if (excl && !i.checked) off = true;
+            if (!excl && i.getAttribute("data-exclusive") && checked.length > 0 && !i.checked) off = true;
+            if (max && !i.checked && checked.length >= max) off = true;
+            i.disabled = off;
+            i.parentNode.classList.toggle("is-off", off);
+          });
+        }
+      }
+      inputs.forEach(function (i) {
+        i.addEventListener("change", function () {
+          if (i.type === "checkbox" && i.getAttribute("data-exclusive") && i.checked) {
+            inputs.forEach(function (o) { if (o !== i) o.checked = false; });
+          }
+          refresh();
+          if (i.getAttribute("data-other") && i.checked) i.parentNode.querySelector(".other-text").focus();
+        });
+      });
+      refresh();
+    });
+
+    /* Skip section 5a when someone has never used AI */
+    var aiSection = form.querySelector('[data-section="ai-experience"]');
+    function syncSkip() {
+      var never = false;
+      boxes(q("q11")).forEach(function (i) { if (i.checked && i.value === "Never") never = true; });
+      aiSection.hidden = never;
+    }
+    boxes(q("q11")).forEach(function (i) { i.addEventListener("change", syncSkip); });
+    syncSkip();
+
+    function valueOf(el) {
+      var type = el.getAttribute("data-type");
+      if (type === "text" || type === "area") return el.querySelector("input,textarea").value.trim();
+      var out = [];
+      boxes(el).forEach(function (i) {
+        if (!i.checked) return;
+        if (i.getAttribute("data-other")) {
+          var t = i.parentNode.querySelector(".other-text").value.trim();
+          out.push("Other: " + (t || "(no details)"));
+        } else out.push(i.value);
+      });
+      return out.join("; ");
+    }
+
+    function showError(msg, target) {
+      errBox.textContent = msg; errBox.hidden = false;
+      (target || errBox).scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      errBox.hidden = true;
+      Array.prototype.forEach.call(form.querySelectorAll(".survey-q"), function (el) { el.classList.remove("has-error"); });
+
+      var data = {};
+      var firstBad = null;
+      Array.prototype.forEach.call(form.querySelectorAll(".survey-q[data-q]"), function (el) {
+        var id = el.getAttribute("data-q");
+        if (id === "org") { data["Organization"] = valueOf(el); return; }
+        var inSkipped = aiSection.hidden && aiSection.contains(el);
+        var v = inSkipped ? "(skipped: has not used AI)" : valueOf(el);
+        if (!inSkipped && el.getAttribute("data-required") && !v) { el.classList.add("has-error"); if (!firstBad) firstBad = el; }
+        if (v.indexOf("Other: (no details)") > -1 && !inSkipped) { el.classList.add("has-error"); if (!firstBad) firstBad = el; }
+        data[LABELS[id] || id] = v || "(no answer)";
+      });
+      if (firstBad) { showError("Please answer the highlighted question" + "s".repeat(form.querySelectorAll(".has-error").length > 1) + " (required, or add details next to “Other”).", firstBad); return; }
+
+      if (form.botcheck.checked || Date.now() - started < 8000) { /* looks automated */ thanks.hidden = false; form.hidden = true; return; }
+
+      if (SETTINGS.ACCESS_KEY.indexOf("PASTE_") === 0) {
+        showError("The survey isn’t switched on yet. Please email info@kdworksllc.com and we’ll send you a link."); return;
+      }
+
+      var payload = { access_key: SETTINGS.ACCESS_KEY, subject: SETTINGS.SUBJECT, from_name: "KD Works website survey", botcheck: "" };
+      if (source) payload["Source tag"] = source;
+      for (var k in data) payload[k] = data[k];
+
+      btn.disabled = true; btn.textContent = "Sending...";
+      fetch(SETTINGS.ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(payload) })
+        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.success !== false, j: j }; }); })
+        .then(function (res) {
+          if (res.ok) { form.hidden = true; document.querySelector(".survey-hero").hidden = true; thanks.hidden = false; thanks.focus(); window.scrollTo(0, 0); }
+          else { btn.disabled = false; btn.textContent = "Submit survey"; showError("Something went wrong sending your answers. Please try again, or email info@kdworksllc.com."); }
+        })
+        .catch(function () { btn.disabled = false; btn.textContent = "Submit survey"; showError("We couldn’t reach the form service. Please check your connection and try again."); });
+    });
+  })();
+  </script>
+</body>
+</html>
