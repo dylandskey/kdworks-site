@@ -195,3 +195,15 @@ p { margin: 0 0 16px; }
   .ladder-notes { grid-template-columns: repeat(3, 1fr); gap: 0 32px; }
   .ladder-types { grid-template-columns: 1fr 1fr; }
 }
+
+/* Team */
+.team { list-style: none; margin: 36px 0 0; padding: 28px 0 0; border-top: 1px solid var(--hairline); display: flex; flex-wrap: wrap; gap: 28px 48px; }
+.team li { text-align: left; }
+.team img {
+  width: 128px; height: 128px; border-radius: 50%;
+  border: 1px solid var(--hairline); background: #EFEADD; object-fit: cover;
+  margin-bottom: 12px;
+}
+.team p { margin: 0; }
+.team-name { font-family: var(--serif); font-weight: 700; color: var(--navy); font-size: 1.15rem; line-height: 1.2; }
+.team-role { color: var(--muted); font-size: 0.95rem; }
