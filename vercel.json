@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/survey.html", "destination": "/interest.html", "permanent": true }
+  ]
+}
