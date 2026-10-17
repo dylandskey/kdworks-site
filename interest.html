@@ -519,8 +519,14 @@
       for (var k in data) payload[k] = data[k];
 
       btn.disabled = true; btn.textContent = "Sending...";
-      fetch(SETTINGS.ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(payload) })
-        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.success !== false, j: j }; }); })
+      function post(url) {
+        return fetch(url, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(payload) })
+          .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.success !== false, j: j }; }); });
+      }
+      /* Our own email function first (sends the confirmation too); Web3Forms is the backup. */
+      post("/api/interest")
+        .catch(function () { return { ok: false }; })
+        .then(function (r) { return r.ok ? r : post(SETTINGS.ENDPOINT); })
         .then(function (res) {
           if (res.ok) { form.hidden = true; document.querySelector(".survey-hero").hidden = true; thanks.hidden = false; thanks.focus(); window.scrollTo(0, 0); }
           else { btn.disabled = false; btn.textContent = "Send to KD Works"; showError("Something went wrong sending your form. Please try again, or email info@kdworksllc.com."); }
